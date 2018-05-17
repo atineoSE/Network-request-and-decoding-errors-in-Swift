@@ -32,7 +32,7 @@ extension Data {
 let rootURL = URL(string: "https://swapi.co/api/")!
 let nonExistingUrl = URL(string: "https://nonexisting.co/api/")!
 let nonExistingResourceUrl = URL(string: "https://swapi.co/api/chewbacca/")!
-let urlWithNonExistingQuery = URL(string: "https://swapi.co/api/films?u=5")!
+let urlWithNonExistingQuery = URL(string: "https://swapi.co/api/films/?nonexisting=query")!
 
 // Barrier
 var proceed = true

@@ -119,7 +119,7 @@ Optional("{\"count\":7,\"next\":null,\"previous\":null,\"results\":[{\"title\":\
 
 **Response**: 
 ```
-<NSHTTPURLResponse: 0x600000026760> { URL: https://swapi.co/api/films/?u=5 } { Status Code: 200, Headers {
+<NSHTTPURLResponse: 0x6000002237a0> { URL: https://swapi.co/api/films/?nonexisting=query } { Status Code: 200, Headers {
     "Content-Encoding" =     (
         gzip
     );
@@ -127,7 +127,7 @@ Optional("{\"count\":7,\"next\":null,\"previous\":null,\"results\":[{\"title\":\
         "application/json"
     );
     Date =     (
-        "Wed, 16 May 2018 12:54:32 GMT"
+        "Thu, 17 May 2018 09:37:31 GMT"
     );
     Etag =     (
         "W/\"a6f57b83572279727b3a9208d0653a82\""
@@ -145,7 +145,7 @@ Optional("{\"count\":7,\"next\":null,\"previous\":null,\"results\":[{\"title\":\
         "GET, HEAD, OPTIONS"
     );
     "cf-ray" =     (
-        "41bdfe527d3364b1-FRA"
+        "41c51b159f046403-FRA"
     );
     "expect-ct" =     (
         "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
