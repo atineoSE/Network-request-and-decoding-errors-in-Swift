@@ -8,13 +8,13 @@ The [Star Wars API](https://swapi.co/api/) is used as reference.
 
 |Case |Data |Response |Network error |Decoding |
 |---|---|---|---|---|
-1) Successful |Some |200 |nil |Ok |
-2) Non-existing host |nil |nil |`NSURLErrorDomain`|N/A |
-3) Non-existing resource |Some |404 |nil |`dataCorrupted` |
-4) Non-existing query |Some |200(a) |nil |`typeMismatch` (a) |
-5) Corrupted data |Some |200 |nil |`dataCorrupted` |
-6) Model mismatch |Some |200 |nil |`keyNotFound` |
-7) Offline mode |nil |nil |`NSURLErrorDomain` |N/A |
+|1) Successful |Some |200 |nil |Ok |
+|2) Non-existing host |nil |nil |`NSURLErrorDomain`|N/A |
+|3) Non-existing resource |Some |404 |nil |`dataCorrupted` |
+|4) Non-existing query |Some |200(a) |nil |`typeMismatch` (a) |
+|5) Corrupted data |Some |200 |nil |`dataCorrupted` |
+|6) Model mismatch |Some |200 |nil |`keyNotFound` |
+|7) Offline mode |nil |nil |`NSURLErrorDomain` |N/A |
 
 (a) Some APIs return 404 when a non-existing query is used, giving `keyNotFound` as error when decoding. The sample StarWars API returns a valid response, just ignoring the non-existing query.
 
