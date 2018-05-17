@@ -59,7 +59,9 @@ API(films: https://swapi.co/api/films/, people: https://swapi.co/api/people/, pl
 
 ## Exercise 2: non-existing host
 **Data**: none 
+
 **Response**: none
+
 **Network Error** :
 ```
 Error Domain=NSURLErrorDomain Code=-1003 "A server with the specified hostname could not be found." UserInfo={NSUnderlyingError=0x600001055d80 {Error Domain=kCFErrorDomainCFNetwork Code=-1003 "(null)" UserInfo={_kCFStreamErrorCodeKey=8, _kCFStreamErrorDomainKey=12}}, NSErrorFailingURLStringKey=https://nonexisting.co/api/, NSErrorFailingURLKey=https://nonexisting.co/api/, _kCFStreamErrorDomainKey=12, _kCFStreamErrorCodeKey=8, NSLocalizedDescription=A server with the specified hostname could not be found.}
@@ -102,6 +104,7 @@ Optional("<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n<meta charset=\"utf-8\"
 ```
 
 **Network error**: none
+
 **Decoding error**:
 ``` 
 dataCorrupted(Swift.DecodingError.Context(codingPath: [], debugDescription: "The given data was not valid JSON.", underlyingError: Optional(Error Domain=NSCocoaErrorDomain Code=3840 "JSON text did not start with array or object and option to allow fragments not set." UserInfo={NSDebugDescription=JSON text did not start with array or object and option to allow fragments not set.})))
@@ -153,6 +156,7 @@ Optional("{\"count\":7,\"next\":null,\"previous\":null,\"results\":[{\"title\":\
 } }
 ```
 **Network error**: none
+
 **Decoding error**: 
 ```
 typeMismatch(Swift.Double, Swift.DecodingError.Context(codingPath: [CodingKeys(stringValue: "results", intValue: nil), _JSONKey(stringValue: "Index 0", intValue: 0), CodingKeys(stringValue: "releaseDate", intValue: nil)], debugDescription: "Expected to decode Double but found a string/data instead.", underlyingError: nil))
@@ -160,6 +164,7 @@ typeMismatch(Swift.Double, Swift.DecodingError.Context(codingPath: [CodingKeys(s
 
 ## Exercise 5: corrupted data (non-conforming JSON)
 **Data**: (overriden by playground for sample of corrupted data)
+
 **Response**: 
 ```
 <NSHTTPURLResponse: 0x600000026fc0> { URL: https://swapi.co/api/ } { Status Code: 200, Headers {
@@ -200,6 +205,7 @@ typeMismatch(Swift.Double, Swift.DecodingError.Context(codingPath: [CodingKeys(s
 ```
 
 **Network error**: none
+
 **Decoding error**:  
 ```
 dataCorrupted(Swift.DecodingError.Context(codingPath: [], debugDescription: "The given data was not valid JSON.", underlyingError: Optional(Error Domain=NSCocoaErrorDomain Code=3840 "JSON text did not start with array or object and option to allow fragments not set." UserInfo={NSDebugDescription=JSON text did not start with array or object and option to allow fragments not set.})))
@@ -250,6 +256,7 @@ Optional("{\"people\":\"https://swapi.co/api/people/\",\"planets\":\"https://swa
 } }
 ```
 **Network error**: none
+
 **Decoding error**: 
 ```
 keyNotFound(CodingKeys(stringValue: "count", intValue: nil), Swift.DecodingError.Context(codingPath: [], debugDescription: "No value associated with key CodingKeys(stringValue: \"count\", intValue: nil) (\"count\").", underlyingError: nil))
@@ -257,7 +264,9 @@ keyNotFound(CodingKeys(stringValue: "count", intValue: nil), Swift.DecodingError
 
 ## Exercise 7: request in offline mode (disable host connection in playground to get it)
 **Data**: none 
+
 **Response**: none
+
 **Network Error** :
 ```
 Error Domain=NSURLErrorDomain Code=-1009 "The Internet connection appears to be offline." UserInfo={NSUnderlyingError=0x60400005fbf0 {Error Domain=kCFErrorDomainCFNetwork Code=-1009 "(null)" UserInfo={_kCFStreamErrorCodeKey=50, _kCFStreamErrorDomainKey=1}}, NSErrorFailingURLStringKey=https://swapi.co/api/, NSErrorFailingURLKey=https://swapi.co/api/, _kCFStreamErrorDomainKey=1, _kCFStreamErrorCodeKey=50, NSLocalizedDescription=The Internet connection appears to be offline.}
